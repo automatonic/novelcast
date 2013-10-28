@@ -89,7 +89,7 @@ async Task Run()
 public string SanitizeTitle(string title)
 {
 	title = title.ToLower();
-	title = title.Replace("'", "");
+	title = title.Replace("'", "").Replace(",", "");
 	return MatchMultipleUnderscores.Replace(MatchIllegalChars.Replace(title, "_"), "_");
 }
 
